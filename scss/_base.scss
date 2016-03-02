@@ -1,0 +1,34 @@
+em {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  text-align: center;
+}
+h2 {
+  font-size: 1.5em;
+  text-align: center;
+}
+article {
+  h3 {
+    position: relative;
+    height: 0;
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    text-align: center;
+  }
+}
+
+.mixing {
+  section {
+    background-color: black;
+    height: 510px;
+    .addedP{
+      color: white;
+      padding-top: 50%;
+      font-size: 40px;
+    }
+  }
+}

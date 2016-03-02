@@ -1,0 +1,71 @@
+  @mixin articleStyles($borderColor) {
+  min-height: 500px;
+  border: 5px solid $borderColor;
+  display: inline-block;
+  margin: 2%;
+  width: 20%;
+}
+
+@mixin gradient($someColor: #888888){
+  @if $someColor == red {
+    $inputColorWhiten: #000101;
+    $inputColorBlacken: #010000;
+  }
+  @else if $someColor == green {
+    $inputColorWhiten: #010001;
+    $inputColorBlacken: #000100;
+  }
+  @else if $someColor == blue {
+    $inputColorWhiten: #010100;
+    $inputColorBlacken: #000001;
+  }
+
+
+  @mixin hovering {
+    content: "#{$color}";
+    color: black;
+    position: relative;
+    left: 45%;
+  }
+
+  @for $i from 0 through 255 {
+    $color: white - ($i * $inputColorWhiten);
+
+    .divPickerWhite#{$i} {
+      background : $color;
+      height: 1px;
+      width: 100%;
+      font-size:0px;
+    }
+    .divPickerWhite#{$i}:hover {
+      color: black;
+      font-size: 40px;
+      border: 1px solid white;
+      height: 50px;
+    }
+      .divPickerWhite#{$i}:after {
+        @include hovering;
+      }
+  }
+
+  @for $i from 1 through 255 {
+    $color: black + ($i * $inputColorBlacken);
+
+    .divPickerBlack#{$i} {
+      background : $color;
+      height: 1px;
+      width: 100%;
+      font-size:0px;
+    }
+    .divPickerBlack#{$i}:hover {
+      color: white;
+      font-size: 40px;
+      border: 1px solid white;
+      height: 50px;
+    }
+      .divPickerBlack#{$i}:after {
+        @include hovering;
+        color: white;
+      }
+  }
+}
