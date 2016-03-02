@@ -6,7 +6,9 @@
 
 2.  `gulp`
 
-    *note that css minify and course maps are commented out as they add a lot of time to the gulp task*
+*note that css minify and course maps are commented out as they add a lot of time to the gulp task*
+
+###Using the App###
 
 3. `node server`
 
