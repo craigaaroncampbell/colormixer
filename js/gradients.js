@@ -47,14 +47,14 @@ for (var i = 255; i > 1; i--) {
   console.log("before: ", bgcMix);
 
   var colors = bgc.match(nums);
-  console.log("colors to add ", colors)
+  console.log("colors to add ", colors);
 
   var oldColors = bgcMix.match(nums);
   var oldR = oldColors[0];
   var oldG = oldColors[1];
   var oldB = oldColors[2];
 
-  console.log("old colors", oldColors)
+  console.log("old colors", oldColors);
   // $('#mixed').css('background-color', bgc);
 
   var bgcMix = $('#mixed').css('background-color');
@@ -73,9 +73,9 @@ for (var i = 255; i > 1; i--) {
 
   console.log("NOW colors to add: ", colors);
 
-  var r = Number(colors[0]).toString(16)
-  var g = Number(colors[1]).toString(16)
-  var b = Number(colors[2]).toString(16)
+  var r = Number(colors[0]).toString(16);
+  var g = Number(colors[1]).toString(16);
+  var b = Number(colors[2]).toString(16);
   if (Number(r < 10)) r = '0' + r;
   if (r == "a") r = "0a";
   if (r == "b") r = "0b";

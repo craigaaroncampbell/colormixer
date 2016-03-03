@@ -17,4 +17,3 @@
 5. Hover over a color to see its hex value.  Click it to add it to the "mixed colors" container.
 
 6.  As more and more colors are clicked, the "mixed colors" container will become closer and closer to white  (adding hex values up to FF for RGB).
-
