@@ -17,10 +17,8 @@ gulp.task('static:dev', function() {
   .pipe(gulp.dest(__dirname + '/build'));
 });
 
-
 gulp.task('watch', function() {
   gulp.watch(['./**/*.scss', './*.html', './**/*.js'], ['sass:dev', 'static:dev']);
 });
-
 
 gulp.task('default', ['sass:dev', 'static:dev']);
