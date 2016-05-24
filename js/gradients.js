@@ -24,7 +24,9 @@ for (i = 255; i > 1; i--) {
   addDivs(i, 'Black', 'reds', 'greens', 'blues');
 }
 
- $('.colordiv').on('click', function(){
+$('#mixed').append('<p class="addedP">#000000</p>');
+
+$('.colordiv').on('click', function(){
   var nums = /\d+/g;
   var bgc = $(this).css('background-color');
   var bgcMix = $('#mixed').css('background-color');
@@ -39,7 +41,6 @@ for (i = 255; i > 1; i--) {
   colors[1] = Number(colors[1]);
   colors[2] = Number(colors[2]);
 
-  // indices for R, G, B
   colors[0] += Number(oldColors[0]);
   if (colors[0] > 255) colors[0] = 255;
   colors[1] += Number(oldColors[1]);
@@ -59,10 +60,15 @@ for (i = 255; i > 1; i--) {
   $('#mixed').css('background-color', hexStr);
   $('.addedP').remove();
   $('#mixed').append('<p class="addedP">' + hexStr + '</p>');
-  // if (parseInt(r, 16) > parseInt(dd, 16) || g > dd || b > dd ) $('.addedP').css('color', 'black');
+  if (parseInt(r, 16) > parseInt('dd', 16) || parseInt(g, 16) > parseInt('dd', 16) || parseInt(b, 16) > parseInt('dd', 16)) {
+    $('.addedP').css('color', 'black');
+    $('.mixH3').css('color', 'black');
+  }
 });
 
 $('#reset').on('click', function(){
-    $('#mixed').css('background-color', 'black');
-    $('.addedP').remove();
+  $('#mixed').css('background-color', 'black');
+  $('.addedP').remove();
+  $('.mixH3').css('color', 'white');
+  $('#mixed').append('<p class="addedP">#000000</p>');
 });
