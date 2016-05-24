@@ -13,4 +13,17 @@
 
 .mixing{
   @include articleStyles(grey);
+  section {
+    background-color: black;
+    height: 510px;
+  }
+  h3 {
+    color: white;
+  }
+}
+
+.addedP{
+  color: white;
+  padding-top: 50%;
+  font-size: 40px;
 }
