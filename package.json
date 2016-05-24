@@ -12,7 +12,6 @@
   "devDependencies": {
     "express": "^4.13.4",
     "gulp": "^3.9.1",
-    "node-sass": "3.4.2",
     "gulp-minify-css": "^1.2.4",
     "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^1.6.0"

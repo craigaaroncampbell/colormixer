@@ -5,8 +5,14 @@
   margin: 2%;
   width: 20%;
 }
+@mixin hovering($color) {
+  content: "#{$color}";
+  color: black;
+  position: relative;
+  left: 45%;
+}
 
-@mixin gradient($someColor: #888888){
+@mixin gradient($someColor, $inputColorWhiten: none, $inputColorBlacken: none){
   @if $someColor == red {
     $inputColorWhiten: #000101;
     $inputColorBlacken: #010000;
@@ -18,13 +24,6 @@
   @else if $someColor == blue {
     $inputColorWhiten: #010100;
     $inputColorBlacken: #000001;
-  }
-
-  @mixin hovering {
-    content: "#{$color}";
-    color: black;
-    position: relative;
-    left: 45%;
   }
 
   @for $i from 0 through 255 {
@@ -43,7 +42,7 @@
       height: 50px;
     }
       .divPickerWhite#{$i}:after {
-        @include hovering;
+        @include hovering($color);
       }
   }
 
@@ -63,7 +62,7 @@
       height: 50px;
     }
       .divPickerBlack#{$i}:after {
-        @include hovering;
+        @include hovering($color);
         color: white;
       }
   }
