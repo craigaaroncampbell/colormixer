@@ -3,14 +3,14 @@
   @include articleStyles(#ff0000);
 }
 .green{
-   @include gradient(green);
-   @include articleStyles(#00ff00);
+  @include gradient(green);
+  @include articleStyles(#00ff00);
 }
 .blue{
-   @include gradient(blue);
-   @include articleStyles(#0000ff);
+  @include gradient(blue);
+  @include articleStyles(#0000ff);
 }
 
 .mixing{
-   @include articleStyles(grey);
+  @include articleStyles(grey);
 }

@@ -1,18 +1,18 @@
-  @mixin articleStyles($borderColor) {
+@mixin articleStyles($borderColor) {
   min-height: 500px;
   border: 5px solid $borderColor;
   display: inline-block;
   margin: 2%;
   width: 20%;
 }
-@mixin hovering($color) {
+
+@mixin display-hex($color) {
   content: "#{$color}";
-  color: black;
   position: relative;
   left: 45%;
 }
 
-@mixin gradient($someColor, $inputColorWhiten: none, $inputColorBlacken: none){
+@mixin gradient($someColor, $inputColorWhiten: none, $inputColorBlacken: none) {
   @if $someColor == red {
     $inputColorWhiten: #000101;
     $inputColorBlacken: #010000;
@@ -34,15 +34,14 @@
       height: 1px;
       width: 100%;
       font-size:0px;
-      
+
       &:hover {
-        color: black;
         font-size: 40px;
         border: 1px solid white;
         height: 50px;
       }
       &::after {
-        @include hovering($color);
+        @include display-hex($color);
       }
     }
   }
@@ -63,8 +62,7 @@
         height: 50px;
       }
       &::after {
-        @include hovering($color);
-        color: white;
+        @include display-hex($color);
       }
     }
   }
