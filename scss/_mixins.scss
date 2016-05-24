@@ -34,16 +34,17 @@
       height: 1px;
       width: 100%;
       font-size:0px;
-    }
-    .divPickerWhite#{$i}:hover {
-      color: black;
-      font-size: 40px;
-      border: 1px solid white;
-      height: 50px;
-    }
-      .divPickerWhite#{$i}:after {
+      
+      &:hover {
+        color: black;
+        font-size: 40px;
+        border: 1px solid white;
+        height: 50px;
+      }
+      &::after {
         @include hovering($color);
       }
+    }
   }
 
   @for $i from 1 through 255 {
@@ -54,16 +55,17 @@
       height: 1px;
       width: 100%;
       font-size:0px;
-    }
-    .divPickerBlack#{$i}:hover {
-      color: white;
-      font-size: 40px;
-      border: 1px solid white;
-      height: 50px;
-    }
-      .divPickerBlack#{$i}:after {
+
+      &:hover {
+        color: white;
+        font-size: 40px;
+        border: 1px solid white;
+        height: 50px;
+      }
+      &::after {
         @include hovering($color);
         color: white;
       }
+    }
   }
 }
